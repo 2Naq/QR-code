@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      function detectPlatform() {
+        var userAgent = navigator.userAgent || navigator.vendor || window.chrome;
+        if (/android/i.test(userAgent)) {
+          alert("This device is running Android.");
+        }
+        if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+          alert("This device is running iOS.");
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <button onclick="detectPlatform()">Detect Platform</button>
+  </body>
+</html>
